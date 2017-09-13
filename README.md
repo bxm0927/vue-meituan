@@ -7,7 +7,7 @@
 
 ## :book: 技术栈
 
-<img align="right" src="https://user-gold-cdn.xitu.io/2017/9/13/c1224c32dac011d44ec4b024118608f1"/>
+<img align="right" src="http://oph264zoo.bkt.clouddn.com/17-9-13/13471940.jpg"/>
 
 【前端】
 
