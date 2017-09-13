@@ -1,0 +1,55 @@
+/**
+ * 作品：reset.css
+ * 维护：白小明
+ * 更新：2017年8月30日
+ * 理念：1. 适应中文，基于最新主流浏览器
+ *       2. reset 的目的不是清除浏览器的默认样式，这仅是部分工作。清除和重置是紧密不可分的。
+ *       3. reset 的目的不是让默认样式在所有浏览器下一致，而是减少默认样式有可能带来的问题。
+ */
+
+/* 清除内外边距 */
+@charset "utf-8";
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote,
+pre,dl, dt, dd, ul, ol, li,
+form, fieldset, lengend, button, input, textarea,
+th, td { margin: 0; padding: 0; }
+
+/* 重置列表元素 */
+ul, ol { list-style: none; }
+
+/* 重置文本格式元素 */
+a { text-decoration: none; }
+q:before, q:after { content: ''; }
+
+/* 重置表单元素 */
+legend { color: #000; } /* for ie6 */
+
+/* 使得表单元素在 ie 下能继承字体大小 */
+button, textarea { font-size: 100%; border: 0; }
+
+/* img 搭车：让链接里的 img 无边框 */
+fieldset, img { border: 0; }
+
+/* 重置表格元素 */
+table { border-collapse: collapse; border-spacing: 0; }
+
+/* 文字选中效果 */
+::selection { background-color: #b3d4fc; text-shadow: none; }
+
+/* 清除浮动 */
+.fl { float: left; }
+.fr { float: right; }
+.clearfix:after { display: block; clear: both; content: ""; visibility: hidden; height: 0; }
+.clearfix { zoom: 1; }
+
+/* 显示隐藏 */
+.hide { display: none; }
+.show { display: block; }
+
+/* 移动设备 */
+body {
+  /* font-family: 'PingFang SC', 'STHeitiSC-Light', 'Helvetica-Light', arial, sans-serif, 'Droid Sans Fallback'; */
+  /* user-select: none; */
+  /* -webkit-text-size-adjust: none; */
+  /* -webkit-tap-highlight-color: rgba(0, 0, 0, 0); */
+}

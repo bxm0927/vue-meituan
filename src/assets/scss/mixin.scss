@@ -1,0 +1,200 @@
+// bourbon.io: Sass的简单轻便的mixin库。
+//
+// 导入：@import '~@/common/scss/mymixin.scss';
+// 使用：@include xx();
+
+// 右边竖向分割线
+@mixin right-bar($right:-8px) {
+  margin-right: 10px;
+  position: relative;
+  &:after {
+    position: absolute;
+    content: '';
+    top: 2px;
+    right: $right;
+    height: 15px;
+    // 1px
+    border-right: 1px solid #999;
+    transform: scaleY(0.5);
+  }
+}
+
+// 2x 3x 背景图片
+@mixin bg-image($name) {
+  background-image: url($name + '@2x.png');
+  @media (-webkit-min-device-pixel-ratio: 3), (min-device-pixel-ratio: 3) {
+    background-image: url($name + "@3x.png");
+  }
+}
+
+// 文本溢出省略号显示 (默认1行)
+@mixin ellipsis($line: 1){
+  @if $line == 1 {
+    -ms-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  @else {
+    display: -webkit-box !important;
+    -ms-text-overflow: ellipsis;
+    text-overflow:ellipsis;
+    overflow: hidden;
+    // word-break: break-all; // 断词
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $line;
+  }
+}
+
+// 扩展点击区域
+@mixin extend-click() {
+  // position: abosulte;
+  // right: 0;
+  // top: 0;
+  // padding: 20px;
+
+  position: relative;
+  &:before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+  }
+}
+
+// 遮罩层
+@mixin over-screen($pos: 'fixed') {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  // 全屏遮罩
+  @if $pos == 'fixed' {
+    position: fixed;
+  }
+  // 区域遮罩
+  @else if $pos == 'absolute' {
+    position: absolute;
+  }
+}
+
+// 子元素 默认水平垂直居中
+@mixin child-center($mode: 'xy') {
+  display: flex;
+  // 水平居中
+  @if $mode == 'x' {
+    align-items: center;
+  }
+  // 垂直居中
+  @else if $mode == 'y' {
+    justify-content: center;
+  }
+  // 水平垂直居中
+  @else if $mode == 'xy' {
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+// 当前元素 默认水平垂直居中
+@mixin cur-center($w: 0px, $h: 0px) {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: $w;
+  height: $h;
+  // margin-top: -($h / 2);
+  // margin-left: -($w / 2);
+  transform: translate(-50%, -50%);
+}
+
+// 移动端 1px 边框问题
+@mixin onepx($mode: 'top', $lastHide: false) {
+  // 低级用法：
+  //      border-bottom: 1px solid rgba(7, 17, 27, 0.1);
+  // 中级用法：
+  //      box-shadow: inset 0px 1px 1px -1px #c8c7cc;
+  //      box-shadow: inset 0px -1px 1px -1px #c8c7cc;
+  // 高级用法：
+
+  position: relative;
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    border-top: 1px solid rgba(7, 17, 27, 0.1);
+    transform: scaleY(0.5);
+  }
+
+  @if $mode == 'top' {
+    &:after {
+      top: 0;
+    }
+  }
+  @if $mode == 'bottom' {
+    &:after {
+      bottom: 0;
+    }
+  }
+  @if $lastHide {
+    &:last-child {
+      &:after {
+        border-top: 0;
+      }
+    }
+  }
+}
+
+// Logo 搜索引擎优化
+// <h1><a href="https://cn.wordpress.org/" title="首页">WordPress.org</a></h1>
+@mixin better-logo() {
+  display: block;
+  background: url(...) center left no-repeat;
+  background-size: 303px 53px;
+  width: 303px;
+  height: 88px;
+  text-indent: -9999px;
+  text-align: left;
+  overflow: hidden;
+}
+
+// 将文字设置为透明
+@mixin text-hide() {
+  font: 0/0 serif;
+  text-shadow: none;
+  color: transparent;
+}
+
+@mixin shadow() {
+  box-shadow: 0px 1px 2px 0px rgba(84, 107, 107, 0.40);
+  transition: all .5s ease-out;
+  &:hover{
+    box-shadow: -2px 10px 20px -1px rgba(84, 107, 107, 0.40);
+    transition: all .3s ease-in;
+
+    // transform: translateY(-3px);
+    // box-shadow: 1px 1px 20px #999;
+  }
+}
+
+
+// // 商品图片
+// .image-header {
+//   // 制作一个宽高相等的容器 1:1
+//   position: relative;
+//   width: 100%;
+//   height: 0;
+//   padding-top: 100%;
+//   img {
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     height: 100%;
+//   }
+// }
