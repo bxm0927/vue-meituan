@@ -9,6 +9,8 @@
 
 <img align="right" src="http://oph264zoo.bkt.clouddn.com/17-9-13/13471940.jpg"/>
 
+[](https://user-gold-cdn.xitu.io/2017/9/13/6ccb1d272720d60b85795edb8a506ce4)
+
 【前端】
 
 - **Vue**：构建用户界面的 MVVM 框架，核心是响应的数据绑定和组系统件
