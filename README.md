@@ -7,7 +7,7 @@
 
 ## :book: 技术栈
 
-<img align="right" src="http://oph264zoo.bkt.clouddn.com/17-9-13/13471940.jpg"/>
+<img align="right" src="http://oph264zoo.bkt.clouddn.com/17-9-15/96325894.jpg"/>
 
 ![image](https://user-gold-cdn.xitu.io/2017/9/13/6ccb1d272720d60b85795edb8a506ce4)
 
