@@ -1,13 +1,13 @@
 
 # :mortar_board: 美团外卖APP
 
-👉 项目演示地址：http://39.108.232.27:9000
+> 项目几年没有维护了，可能运行不起来，如遇问题请联系我。
+
+👉 ~~项目演示地址：http://39.108.232.27:9000~~
 
 基于 **Vue 全家桶 (2.x)** 制作的美团外卖APP ，一个媲美原生的移动端外卖 App，项目完整、功能完备、UI美观、交互一流。
 
 ## :book: 技术栈
-
-<img align="right" src="http://oph264zoo.bkt.clouddn.com/17-9-15/96325894.jpg"/>
 
 【前端】
 
@@ -116,5 +116,3 @@ $ npm run build
 ## :four_leaf_clover: License
 
 The code is available under the [MIT license](https://opensource.org/licenses/MIT).
-
-![](http://oph264zoo.bkt.clouddn.com/17-8-11/10545126.jpg)
