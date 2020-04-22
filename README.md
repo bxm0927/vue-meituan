@@ -13,7 +13,7 @@
 
 【前端】
 
-<img style="float:left" src="https://user-gold-cdn.xitu.io/2017/9/13/c1224c32dac011d44ec4b024118608f1">
+<img style="float:left;width=200" src="https://user-gold-cdn.xitu.io/2017/9/13/c1224c32dac011d44ec4b024118608f1">
 
 - **Vue**：构建用户界面的 MVVM 框架，核心是响应的数据绑定和组系统件
 - **vue-router**：为单页面应用提供的路由系统，项目上线前使用了路由懒加载技术，来异步加载路由优化性能
