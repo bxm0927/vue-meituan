@@ -7,13 +7,11 @@
 
 基于 **Vue 全家桶 (2.x)** 制作的美团外卖APP ，一个媲美原生的移动端外卖 App，项目完整、功能完备、UI美观、交互一流。
 
-
+![](https://user-gold-cdn.xitu.io/2017/9/13/c1224c32dac011d44ec4b024118608f1)
 
 ## :book: 技术栈
 
 【前端】
-
-<img style="float:left;width=200" src="https://user-gold-cdn.xitu.io/2017/9/13/c1224c32dac011d44ec4b024118608f1">
 
 - **Vue**：构建用户界面的 MVVM 框架，核心是响应的数据绑定和组系统件
 - **vue-router**：为单页面应用提供的路由系统，项目上线前使用了路由懒加载技术，来异步加载路由优化性能
@@ -27,7 +25,7 @@
 - **ES6**：ECMAScript 新一代语法，模块化、解构赋值、Promise、Class 等方法非常好用
 - **Moment.js**：日期时间格式化插件
 
-【后端及数据库】
+【后端】
 
 - **Node.js**：利用 Express 起一个本地测试服务器
 - **Express**：一个自身功能极简，完全是由路由和中间件构成一个的WEB开发框架
